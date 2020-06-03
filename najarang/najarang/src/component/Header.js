@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Button } from 'reactstrap';
+import "./Header.css"
 const handleOnClick =()=>{
     console.log('hi');
 }
@@ -13,14 +14,18 @@ const style = {
   }
 const Header = () => (
 
-    <div className="header">
-                로고
-        <Button color="danger" onClick = {handleOnClick}>
+    <div className="login">
+        
+            <Button color="danger" onClick = {handleOnClick}>
             회원가입
         </Button>
-        <button onClick = {handleOnClick}>
+        
+        
+            <button onClick = {handleOnClick}>
             로그인
         </button>
+        
+        
     </div>
 
 )
