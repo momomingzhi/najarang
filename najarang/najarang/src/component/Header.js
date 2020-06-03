@@ -4,6 +4,13 @@ import { Button } from 'reactstrap';
 const handleOnClick =()=>{
     console.log('hi');
 }
+const style = {
+ 
+    backgroundColor : 'b',
+    border: '1px solid black',
+    
+
+  }
 const Header = () => (
 
     <div className="header">
