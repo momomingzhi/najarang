@@ -16,12 +16,12 @@ const Header = () => (
 
     <div className="login">
         
-            <Button color="danger" onClick = {handleOnClick}>
+            <button type="button" class="btn btn-info" onClick = {handleOnClick}>
             회원가입
-        </Button>
+        </button>
         
         
-            <button onClick = {handleOnClick}>
+            <button type="button" class="btn btn-info" onClick = {handleOnClick}>
             로그인
         </button>
         
