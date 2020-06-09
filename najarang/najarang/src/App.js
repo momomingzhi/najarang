@@ -3,6 +3,7 @@ import Header from './component/Header';
 import TopLayout from './component/TopLayout';
 import MiddleLayout from './component/MiddleLayout';
 import Login from './component/Login'
+import KakaoSignUp from './component/KakaoSignUp'
 import NavBar from './component/NavBar'
 import NaverLogin from 'react-naver-login';
 import styled from 'styled-components';
@@ -21,7 +22,7 @@ class App extends Component {
             </Link>
            
         
-            <Link to='/about' >
+            <Link to='/login' >
               <button type="button" class="btn btn-info">
                 로그인 
             </button>
@@ -30,7 +31,7 @@ class App extends Component {
      
         <hr />
         <Route path='/' component={TopLayout} exact={true}/>
-        <Route path='/about' component={Login} exact={true}/>
+        <Route path='/login' component={KakaoSignUp} exact={true}/>
       </div>
       </Router>
       // <div>

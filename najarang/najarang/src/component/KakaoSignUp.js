@@ -27,8 +27,17 @@ class KakaoSignUp extends Component {
         return (
             
                 <div>
-                    <h1>카카오톡 간편 로그인</h1>
-                    <h4>로그인 후 더 많은 혜택을 누리세요!</h4>
+                    <MainLayout>
+                        <h1>로그인 방식을 선택해 주세요</h1>
+                    </MainLayout>
+                    <MiddleLayout >
+                        <div className="content" >
+                            <h4>카카오로 회원가입</h4>
+                            <h6>카카오로 인증하여 회원가입</h6>
+                           
+                        </div>
+                    </MiddleLayout>
+                    
                     {/* <StKaKaoLogin>
                         <img src={img} alt="a" onClick={this.loginWithKakao} />
                     </StKaKaoLogin> */}
@@ -39,7 +48,8 @@ class KakaoSignUp extends Component {
                         onSuccess={this.responseKaKao}
                         onFailure={this.responseFail}
                         getProfile={true}
-                    />
+                    >아아아
+                        </KaKaoBtn>
 
                 </div>
 
@@ -47,6 +57,34 @@ class KakaoSignUp extends Component {
         );
     }
 }
+const MainLayout = styled.div`
+    display: flex;
+    justify-content:center;
+`;
+const MiddleLayout = styled.div`
+    display:flex;
+    width:500px;
+    height:50px;
+    margin:0 auto;
+    margin-top: 50px;
+    border: 1px solid lightgrey;
+    box-sizing:border-box;
+    flex-direction:column;
+    .content{
+        margin-left: 10px;
+        margin-top: 10px;
+        display:flex;
+        flex-direction:row;
+        h4{
+            margin: 0 auto;
+        }
+        h6{
+            margin-left: 30px;
+            margin-top: 5px;
+        }
+    }
+`;
+
 const StKaKaoLogin = styled.div`
     cursor: pointer;
     /* border-radius:10px; */
