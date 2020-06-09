@@ -2,13 +2,14 @@ import React, {  Component } from 'react';
 import Header from './component/Header';
 import TopLayout from './component/TopLayout';
 import MiddleLayout from './component/MiddleLayout';
-<<<<<<< HEAD
 import Login from './component/Login'
 import NavBar from './component/NavBar'
 import NaverLogin from 'react-naver-login';
+import styled from 'styled-components';
 import { Link, Route, BrowserRouter as Router } from "react-router-dom"
 
 class App extends Component {
+  
   render() {
     return(
       <Router>
@@ -30,22 +31,6 @@ class App extends Component {
         <hr />
         <Route path='/' component={TopLayout} exact={true}/>
         <Route path='/about' component={Login} exact={true}/>
-=======
-import KakaoSignUp from './component/KakaoSignUp';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-class App extends Component {
-  render() {
-    return(
-      <div>
-          <Header   />
-          <TopLayout />
-          <MiddleLayout />
-          {/* <KakaoSignUp /> */}
-            
-          
-          {/* <Header   />
-          <TopLayout /> */}
->>>>>>> 01bace7aceeb11496fd9a15713c9997713d4e281
       </div>
       </Router>
       // <div>

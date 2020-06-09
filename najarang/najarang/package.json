@@ -9,11 +9,8 @@
     "kakaojs": "^1.2.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-<<<<<<< HEAD
     "react-naver-login": "^0.1.3-alpha1",
-=======
     "react-kakao-login": "^1.2.2",
->>>>>>> 01bace7aceeb11496fd9a15713c9997713d4e281
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "styled-components": "^5.1.1",
