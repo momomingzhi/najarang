@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 //import { StyledText } from '../style';
 import KaKaoLogin from 'react-kakao-login';
-
+import NaverLogin from 'react-naver-login';
 
 class KakaoSignUp extends Component {
     constructor(props) {
@@ -32,25 +32,31 @@ class KakaoSignUp extends Component {
                     </MainLayout>
                     <MiddleLayout >
                         <div className="content" >
-                            <h4>카카오로 회원가입</h4>
+                        <KaKaoBtn jsKey={'d1accb2a33731f137e3be748e693ec79'}
+                        onSuccess={this.responseKaKao}
+                        onFailure={this.responseFail}
+                        getProfile={true}>
+                            <p>카카오로 회원가입</p></KaKaoBtn>
                             <h6>카카오로 인증하여 회원가입</h6>
                            
                         </div>
                     </MiddleLayout>
-                    
+                    <NaverLogin 
+                        clientId = "Aqpwh33bx4irAD87YKY8"
+                        callbackUrl = "http://127.0.0.1:3000/login"
+                            render={(props) => <MiddleLayout onClick={props.onClick}>
+                                <div className="content">
+                                <button>네이버로 회원가입</button>
+                                <h6>네이버로 인증하여 회원가입</h6>
+                            </div>
+                            </MiddleLayout>}
+                        onSuccess={(naverUser) => console.log('안녕안녕',naverUser)}
+                        onFailure={() => console.error("result")}
+                    />
                     {/* <StKaKaoLogin>
                         <img src={img} alt="a" onClick={this.loginWithKakao} />
                     </StKaKaoLogin> */}
                     <br></br>
-                    <KaKaoBtn
-                        jsKey={'d1accb2a33731f137e3be748e693ec79'}
-                        buttonText="KaKao"
-                        onSuccess={this.responseKaKao}
-                        onFailure={this.responseFail}
-                        getProfile={true}
-                    >아아아
-                        </KaKaoBtn>
-
                 </div>
 
             
@@ -66,7 +72,7 @@ const MiddleLayout = styled.div`
     width:500px;
     height:50px;
     margin:0 auto;
-    margin-top: 50px;
+    margin-top: 60px;
     border: 1px solid lightgrey;
     box-sizing:border-box;
     flex-direction:column;
@@ -93,22 +99,27 @@ const StKaKaoLogin = styled.div`
         box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 0px 20px 0 rgba(0, 0, 0, 0.19);
     } */
 `;
+const kakao = styled(KaKaoLogin)`
+    color: #783c00;
+`;
 
 const KaKaoBtn = styled(KaKaoLogin)`
     padding: 0;
     width: 190px;
-    height: 44px;
+    height: 30px;
+ 
     line-height: 44px;
-    color: #783c00;
-    background-color: #FFEB00;
     border: 1px solid transparent;
     border-radius: 3px;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bold;
-    text-align: center;
+    
     cursor: pointer;
     &:hover{
         box-shadow: 0 0px 15px 0 rgba(0, 0, 0, 0.2)
+    }
+    .p{
+        margin: 0 auto;
     }
 `
 

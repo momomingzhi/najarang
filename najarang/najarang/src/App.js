@@ -13,27 +13,40 @@ class App extends Component {
   
   render() {
     return(
-      <Router>
-        <div>
-            <Link to='/' >
-            <button type="button" class="btn btn-info">
-                회원가입
-            </button>
-            </Link>
-           
-        
-            <Link to='/login' >
-              <button type="button" class="btn btn-info">
-                로그인 
-            </button>
-            </Link>
+      <Layout>
+        <div className="btn">
+          <button>
+            안녕
+          </button>
+          <button>
+            바이
+          </button>
+        </div>
+      </Layout>
+      // <Router>
+      //   <div>
+      //     <Layout>
+      //       <headerBtn>
+      //       <Link to='/' >
+      //       <button type="button" class="btn btn-info">
+      //           회원가입
+      //       </button>
+      //       </Link>
+      //       <Link to='/login' >
+      //         <button type="button" class="btn btn-info">
+      //           로그인 
+      //       </button>
+      //       </Link>
+      //       </headerBtn>
+      //     </Layout>
+            
        
      
-        <hr />
-        <Route path='/' component={TopLayout} exact={true}/>
-        <Route path='/login' component={KakaoSignUp} exact={true}/>
-      </div>
-      </Router>
+      //   <hr />
+      //   <Route path='/' component={TopLayout} exact={true}/>
+      //   <Route path='/login' component={KakaoSignUp} exact={true}/>
+      // </div>
+      // </Router>
       // <div>
       //   <Header   />
       // </div>
@@ -70,6 +83,33 @@ class App extends Component {
   //   )
     }
  }
+ const Layout = styled.div`
+     display: flex;
+    flex-direction:column;
+    align-items:center;
+     .btn{
+      display: flex;
+      border-width:2;
+      flex-direction:column;
+      
+      width: 100px;
+      height:100px;
+      color:blue;
+      button{
+        display: flex;
+        
+      
+        
+      }
+     }
+ `;
+ const headerBtn = styled.div`
+
+    justify-content:flex-end;
+     background-color:blue;
+     margin-left: 100px;
+     color:blue;
+ `;
 
 export default App;
 
