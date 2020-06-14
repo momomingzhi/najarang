@@ -22,14 +22,14 @@
  }
  .a {
     
-    flex: 2;
+    flex: 3;
  }
  .topic{
     margin-left: 100px;
     padding: 20px 100px;
-    border-radius: 100px;
+    border-radius: 500px;
     background:rgb(78, 224, 224);
-    font-size: 20px;
+    font-size: 15px;
     font-style: inherit;
     border: none;
  

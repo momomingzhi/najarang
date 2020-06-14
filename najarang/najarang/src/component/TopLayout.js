@@ -1,8 +1,10 @@
 import React from 'react';
 import { Button } from 'reactstrap';
 import './TopLayout.css';
+import TopicLayout from './TopicLayout';
 
 const TopLayout=()=>(
+    <div>
     <div className = "myForm">
         <form className = "interestInput">
         <input 
@@ -49,9 +51,22 @@ const TopLayout=()=>(
             </button>
     </div>  
     </div>
-    
     </form>
     </div>
+    <div className = "myForm">
+        <div>
+            핫토픽 리스트
+        </div>
+    <TopicLayout />
+    <TopicLayout />
+    <TopicLayout />
+    <TopicLayout />
+    <TopicLayout />
+</div>
+    <div>
+            최신 게시글
+        </div>
+</div>
     
     
 )

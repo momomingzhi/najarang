@@ -17,6 +17,7 @@ class KakaoSignUp extends Component {
             data: res
         })
         alert(JSON.stringify(this.state.data))
+        console.log('data: ',this.state.data);
     }
 
     responseFail = (err) => {
